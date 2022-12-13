@@ -95,21 +95,21 @@
                 document.onmousemove = null;
             }
 
-            // Add a click event listener to the image for click to rotate below
-            img.addEventListener("click", function() {
+            // // Add a click event listener to the image for click to rotate below
+            // img.addEventListener("click", function() {
 
-                // Get the current rotation value from the image's style
-                var rotation = this.style.transform;
+            //     // Get the current rotation value from the image's style
+            //     var rotation = this.style.transform;
 
-                // Parse the angle from the rotation string
-                var angle = parseInt(rotation.match(/\d+/)[0]);
+            //     // Parse the angle from the rotation string
+            //     var angle = parseInt(rotation.match(/\d+/)[0]);
 
-                // Increase the angle by 90 degrees on each click
-                angle += 90;
+            //     // Increase the angle by 90 degrees on each click
+            //     angle += 90;
 
-                // Set the new rotation value for the image
-                this.style.transform = "rotate(" + angle + "deg)";
-            });
+            //     // Set the new rotation value for the image
+            //     this.style.transform = "rotate(" + angle + "deg)";
+            // });
         }
     </script>
 
