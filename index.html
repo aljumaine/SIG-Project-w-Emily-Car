@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html>
-<style>
-    #mydiv {
-        position: absolute;
-        z-index: 9;
-        background-color: #f1f1f1;
-        text-align: center;
-        border: 1px solid #d3d3d3;
-    }
-    
-    #mydivheader {
-        padding: 10px;
-        cursor: move;
-        z-index: 10;
-        background-color: #2196F3;
-        color: #fff;
-    }
-</style>
+
+<head>
+    <link href="style.css" rel="stylesheet" /> </head>
 
 <body>
 
     <h1>Click and drag an artifact to find the best fit.</h1>
 
-    <div> <img id="imageSrc" src="BoneYale_ag-obj-52211-0001.png" style="display: none"></div>
-    <div> <img id="imageSrc" src="Copy of BoneFS_FS-7664_09.png" style="display: none"></div>
-    <div> <img id="imageSrc" src="Copy of BoneFS_FS-7864_08.png" style="display: none"></div>
-    <div> <img id="imageSrc" src="MirrorFC_FSC-B-508B.png" style="display: none"></div>
-    <div> <img id="imageSrc" src="mirrorFS_39-20-60_3321.png" style="display: none"></div>
-
     <div id="mydiv">
+
         <div id="mydivheader">Click here to move</div>
-        <p>Move</p>
-        <p>this</p>
-        <p>DIV</p>
+
+        <div> <img class="imageSrc" src="BoneYale_ag-obj-52211-0001.png"></div>
+
+        <div> <img class="imageSrc" src="Copy of BoneFS_FS-7664_09.png"></div>
+
+        <div> <img class="imageSrc" src="Copy of BoneFS_FS-7864_08.png"></div>
+
+        <div> <img class="imageSrc" src="MirrorFC_FSC-B-508B.png"></div>
+
+        <div> <img class="imageSrc" src="mirrorFS_39-20-60_3321.png"></div>
+
     </div>
 
     <script>
