@@ -8,41 +8,41 @@
 
     <h1>Click and drag an artifact to find the best fit.</h1>
 
-    <div class="mydiv">
+    <div id="mydiv">
 
-        <div class="mydivheader">Click to rotate the image</div>
+        <div id="mydivheader">Click to move and rotate the artifact.</div>
 
         <div> <img class="imageSrc" src="BoneYale_ag-obj-52211-0001.png"></div>
 
     </div>
 
-    <div class="mydiv">
+    <div id="mydiv">
 
-        <div class="mydivheader">Click here to move artifact</div>
+        <div id="mydivheader">Click here to move artifact</div>
 
         <div> <img class="imageSrc" src="Copy of BoneFS_FS-7664_09.png"></div>
 
     </div>
 
-    <div class="mydiv">
+    <div id="mydiv">
 
-        <div class="mydivheader">Click here to move artifact</div>
+        <div id="mydivheader">Click here to move artifact</div>
 
         <div> <img class="imageSrc" src="Copy of BoneFS_FS-7864_08.png"></div>
 
     </div>
 
-    <div class="mydiv">
+    <div id="mydiv">
 
-        <div class="mydivheader">Click here to move artifact</div>
+        <div id="mydivheader">Click here to move artifact</div>
 
         <div> <img class="imageSrc" src="MirrorFC_FSC-B-508B.png"></div>
 
     </div>
 
-    <div class="mydiv">
+    <div id="mydiv">
 
-        <div class="mydivheader">Click here to move artifact</div>
+        <div id="mydivheader">Click here to move artifact</div>
 
         <div> <img class="imageSrc" src="mirrorFS_39-20-60_3321.png"></div>
 
@@ -57,9 +57,9 @@
                 pos2 = 0,
                 pos3 = 0,
                 pos4 = 0;
-            if (document.getElementById(elmnt.class + "header")) {
+            if (document.getElementById(elmnt.id + "header")) {
                 /* if present, the header is where you move the DIV from:*/
-                document.getElementById(elmnt.class + "header").onmousedown = dragMouseDown;
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
             } else {
                 /* otherwise, move the DIV from anywhere inside the DIV:*/
                 elmnt.onmousedown = dragMouseDown;
@@ -95,21 +95,21 @@
                 document.onmousemove = null;
             }
 
-            // // Add a click event listener to the image for click to rotate below
-            // img.addEventListener("click", function() {
+            // Add a click event listener to the image for click to rotate below
+            img.addEventListener("click", function() {
 
-            //     // Get the current rotation value from the image's style
-            //     var rotation = this.style.transform;
+                // Get the current rotation value from the image's style
+                var rotation = this.style.transform;
 
-            //     // Parse the angle from the rotation string
-            //     var angle = parseInt(rotation.match(/\d+/)[0]);
+                // Parse the angle from the rotation string
+                var angle = parseInt(rotation.match(/\d+/)[0]);
 
-            //     // Increase the angle by 90 degrees on each click
-            //     angle += 90;
+                // Increase the angle by 90 degrees on each click
+                angle += 90;
 
-            //     // Set the new rotation value for the image
-            //     this.style.transform = "rotate(" + angle + "deg)";
-            // });
+                // Set the new rotation value for the image
+                this.style.transform = "rotate(" + angle + "deg)";
+            });
         }
     </script>
 
